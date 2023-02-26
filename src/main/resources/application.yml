@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: swaggerCleanMicronaut
+  router:
+    static-resources:
+      default:
+        enabled: true
+        mapping: /api-docs/swagger/**
+        paths:
+          - classpath:swagger
+
+application:
+  api:
+    swagger:
+      name: micronaut-clean
+
+netty:
+  default:
+    allocator:
+      max-order: 3
